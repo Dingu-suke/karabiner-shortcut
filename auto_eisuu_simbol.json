@@ -1,0 +1,210 @@
+{
+    "title": "記号の入力を自動で半角にする",
+    "rules": [
+                {
+                    "description": "記号時、高速で入力モードに切り替え、戻す",
+                    "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "semicolon",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "semicolon"},
+                        {"key_code": "japanese_kana"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "quote",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "quote"},
+                        {"key_code": "japanese_kana"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "backslash",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "backslash"},
+                        {"key_code": "japanese_kana"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "comma",
+                        "modifiers": {                        
+                            "mandatory":["shift"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "comma", "modifiers": "shift"},
+                        {"key_code": "japanese_kana"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "period",
+                        "modifiers": {
+                            "mandatory":["shift"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "period", "modifiers": "shift"},
+                        {"key_code": "japanese_kana"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "slash",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "slash"},
+                        {"key_code": "japanese_kana"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "open_bracket",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "open_bracket"},
+                        {"key_code": "japanese_kana"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "close_bracket",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "close_bracket"},
+                        {"key_code": "japanese_kana"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

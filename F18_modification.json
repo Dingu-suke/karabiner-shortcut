@@ -1,0 +1,103 @@
+{
+    "title": "F18修飾キー化",
+    "rules": [
+        {
+            "description": "⚠️Simple Modifications で left_cmd を F18 に変換する設定をしてください⚠️",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "left_command",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        { "keycode": "f18" }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[F18] a:⏪ s:⏯️ d:⏩ ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+
+                        "key_code": "f18",
+                        "modifiers": {
+                        "mandatory":[],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [
+                    {
+                    "set_variable": {
+                        "name": "my_modifier_3",
+                        "value":1
+                    }
+                }
+            ],
+                "to_after_key_up": [
+                {
+                    "set_variable": {
+                    "name":"my_modifier_3",
+                    "value": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "basic",
+            "from": {
+                "key_code": "a"
+            },
+            "to": [
+                {"consumer_key_code": "rewind"}
+            ],
+            "conditions": [
+                {
+                "type": "variable_if",
+                "name":"my_modifier_3",
+                "value": 1
+                }
+            ]
+        },
+        {
+            "type": "basic",
+            "from": {
+                "key_code": "s"
+            },
+            "to": [
+                {"consumer_key_code": "play_or_pause"}
+            ],
+            "conditions": [
+                {
+                "type": "variable_if",
+                "name": "my_modifier_3",
+                "value": 1
+                }
+            ]
+        },
+        {
+            "type": "basic",
+            "from": {
+                "key_code": "d"
+            },
+            "to": [
+                {"consumer_key_code": "fast_forward"}
+            ],
+            "conditions": [
+                {
+                "type": "variable_if",
+                "name":"my_modifier_3",
+                "value": 1
+                }
+            ]
+        }
+    ]
+        }
+    ]
+} 

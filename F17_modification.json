@@ -1,0 +1,1031 @@
+{
+    "title": "F17 修飾キー化",
+    "rules": [
+        {
+            "description": "⚠️Simple Modifications で かなキーをF17 に変換する設定をしてください⚠️",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "japanese_kana",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        { "keycode": "f17" }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[F17] i,m,j,k ▶ 上下左右 / u, o 最右左端 / enter ▶ backspace / h l ▶ option 左 右 ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f17",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_2",
+                                "value":1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name":"my_modifier_2",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "return_or_enter",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "delete_or_backspace"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name":"my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "j",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name":"my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "k",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name":"my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "i",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "up_arrow"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name":"my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "m",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "down_arrow"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name":"my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "u",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": "command" 
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name":"my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "o",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": "command" 
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name":"my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "h",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        { "key_code": "left_arrow", "modifiers": "left_option" }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name":"my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        { "key_code": "right_arrow", "modifiers": "left_option" }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name":"my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description":"[F17] p, n ▶ f10, f7 ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f17",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_2",
+                                "value":1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name":"my_modifier_2",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "p",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "f10"},
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "japanese_kana"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "ja"
+                            }
+                        ]
+                    }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "p",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "^en$"
+                            }
+                        ]
+                    }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "n",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "f7"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name":"my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]    
+        },
+        {
+            "description":"[F17] , ▶ , カンマとスペース ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f17",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_2",
+                                "value":1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name":"my_modifier_2",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "comma",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "comma"},
+                        {"key_code": "spacebar"},
+                        {"key_code": "japanese_kana"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "comma",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "comma"},
+                        {"key_code": "spacebar"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                "language": "^en$"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]    
+        },
+        {
+            "description": "[F17] _ ▶ / ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f17",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_2",
+                                "value":1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name":"my_modifier_2",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "international1",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "slash"},
+                        {"key_code": "japanese_kana"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "ja"
+                            }
+                        ]
+                    }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "international1",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "slash"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "^en$"
+                            }
+                        ]
+                        }
+                    ]
+                }                
+            ]
+        },
+        {
+            "description": "[F17] b ▶ cmd + shift + b (新タブ開く) ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f17",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_2",
+                                "value":1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name":"my_modifier_2",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "b",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "b", 
+                            "modifiers": ["left_command" ,"left_shift"]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[F17] 5 ▶ docker compose exec ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f17",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_2",
+                                "value":1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name":"my_modifier_2",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "5",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "d"},
+                        {"key_code": "o"},
+                        {"key_code": "c"},
+                        {"key_code": "k"},
+                        {"key_code": "e"},
+                        {"key_code": "r"},
+
+                        {"key_code": "spacebar"},                        
+
+                        {"key_code": "c"},
+                        {"key_code": "o"},
+                        {"key_code": "m"},
+                        {"key_code": "p"},
+                        {"key_code": "o"},
+                        {"key_code": "s"},
+                        {"key_code": "e"},
+
+                        {"key_code": "spacebar"},
+                        
+                        {"key_code": "e"},
+                        {"key_code": "x"},
+                        {"key_code": "e"},
+                        {"key_code": "c"},
+                        {"key_code": "japanese_kana"}
+
+                    ],
+                    "conditions": [
+                        {
+                            
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "ja"
+                            }
+                        ]
+                    }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "5",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "d"},
+                        {"key_code": "o"},
+                        {"key_code": "c"},
+                        {"key_code": "k"},
+                        {"key_code": "e"},
+                        {"key_code": "r"},
+
+                        {"key_code": "spacebar"},
+                        
+                        {"key_code": "c"},
+                        {"key_code": "o"},
+                        {"key_code": "m"},
+                        {"key_code": "p"},
+                        {"key_code": "o"},
+                        {"key_code": "s"},
+                        {"key_code": "e"},
+
+                        {"key_code": "spacebar"},
+                        
+                        {"key_code": "e"},
+                        {"key_code": "x"},
+                        {"key_code": "e"},
+                        {"key_code": "c"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name":"my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "^en$"
+                            }
+                        ]
+                        }
+                    ]
+                }
+            ]    
+        },
+        {
+            "description": "[F17] 6 ▶ git commit -m'' ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f17",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_2",
+                                "value":1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name":"my_modifier_2",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "6",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "g"},
+                        {"key_code": "i"},
+                        {"key_code": "t"},
+                        
+                        {"key_code": "spacebar"},                        
+                        
+                        {"key_code": "c"},
+                        {"key_code": "o"},
+                        {"key_code": "m"},
+                        {"key_code": "m"},
+                        {"key_code": "i"},
+                        {"key_code": "t"},
+
+                        {"key_code": "spacebar"},
+                        
+                        {"key_code":"hyphen"},
+                        {"key_code":"m"},
+                        {"key_code":"7", "modifiers":"left_shift"},
+                        {"key_code":"7", "modifiers":"left_shift"},
+                        {"key_code": "left_arrow"},
+
+                        {"key_code": "japanese_kana"}
+
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "ja"
+                            }
+                        ]
+                    }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "6",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "g"},
+                        {"key_code": "i"},
+                        {"key_code": "t"},
+
+                        {"key_code": "spacebar"},                      
+                        
+                        {"key_code": "c"},
+                        {"key_code": "o"},
+                        {"key_code": "m"},
+                        {"key_code": "m"},
+                        {"key_code": "i"},
+                        {"key_code": "t"},
+
+                        {"key_code": "spacebar"},
+                        
+                        {"key_code":"hyphen"},
+                        {"key_code":"m"},
+                        {"key_code":"7", "modifiers":"left_shift"},
+                        {"key_code":"7", "modifiers":"left_shift"},
+                        
+                        {"key_code": "left_arrow"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name":"my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "^en$"
+                            }
+                        ]
+                        }
+                    ]
+                }
+            ]    
+        },
+        {
+            "description": "[F17] + 9 => かな、英数",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                    "modifiers": {
+                        "key_code": "f17",
+                        "mandatory":[],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [
+                    {
+                        "set_variable": {
+                        "name": "my_modifier_2",
+                        "value":1
+                        }
+                    }
+                ],
+                "to_after_key_up": [
+                    {
+                        "set_variable": {
+                        "name":"my_modifier_2",
+                        "value": 0
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "9",
+                    "modifiers": {
+                        "mandatory":[],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [
+                    {"key_code": "japanese_kana"}
+                ],
+                "conditions": [
+                    {
+                    "type": "variable_if",
+                    "name":"my_modifier_2",
+                    "value": 1
+                    },
+                    {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "^en$"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "9",
+                    "modifiers": {
+                        "mandatory":[],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [
+                    {"key_code": "japanese_eisuu"}
+                ],
+                "conditions": [
+                    {
+                    "type": "variable_if",
+                    "name":"my_modifier_2",
+                    "value": 1
+                    },
+                    {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "ja"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]},
+        {
+            "description": "[F17] + f18 => かな、英数",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                    "modifiers": {
+                        "key_code": "f17",
+                        "mandatory":[],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [
+                    {
+                        "set_variable": {
+                        "name": "my_modifier_2",
+                        "value":1
+                        }
+                    }
+                ],
+                "to_after_key_up": [
+                    {
+                        "set_variable": {
+                        "name":"my_modifier_2",
+                        "value": 0
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "f18",
+                    "modifiers": {
+                        "mandatory":[],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [
+                    {"key_code": "japanese_kana"}
+                ],
+                "conditions": [
+                    {
+                    "type": "variable_if",
+                    "name":"my_modifier_2",
+                    "value": 1
+                    },
+                    {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "^en$"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "f18",
+                    "modifiers": {
+                        "mandatory":[],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [
+                    {"key_code": "japanese_eisuu"}
+                ],
+                "conditions": [
+                    {
+                    "type": "variable_if",
+                    "name":"my_modifier_2",
+                    "value": 1
+                    },
+                    {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "ja"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]}
+    ]
+}
+
