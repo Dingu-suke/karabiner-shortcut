@@ -9,95 +9,329 @@
                     "from": {
                         "key_code": "left_command",
                         "modifiers": {
-                            "mandatory":[],
-                            "optional": ["any"]
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
                         }
                     },
                     "to": [
-                        { "keycode": "f18" }
+                        {
+                            "keycode": "f18"
+                        }
                     ]
                 }
             ]
         },
         {
-            "description": "[F18] a:⏪ s:⏯️ d:⏩ ",
+            "description": "[F18] (例) 1 => ctr + 1 ",
             "manipulators": [
                 {
                     "type": "basic",
                     "from": {
-
                         "key_code": "f18",
                         "modifiers": {
-                        "mandatory":[],
-                        "optional": ["any"]
-                    }
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_3",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_3",
+                                "value": 0
+                            }
+                        }
+                    ]
                 },
-                "to": [
-                    {
-                    "set_variable": {
-                        "name": "my_modifier_3",
-                        "value":1
-                    }
-                }
-            ],
-                "to_after_key_up": [
                 {
-                    "set_variable": {
-                    "name":"my_modifier_3",
-                    "value": 0
-                    }
+                    "type": "basic",
+                    "from": {
+                        "key_code": "1"
+                    },
+                    "to": [
+                        {
+                            "key_code": "1",
+                            "modifiers": "left_control"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_3",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "2"
+                    },
+                    "to": [
+                        {
+                            "key_code": "2",
+                            "modifiers": "left_control"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_3",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "3"
+                    },
+                    "to": [
+                        {
+                            "key_code": "3",
+                            "modifiers": "left_control"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_3",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "4"
+                    },
+                    "to": [
+                        {
+                            "key_code": "4",
+                            "modifiers": "left_control"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_3",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "5"
+                    },
+                    "to": [
+                        {
+                            "key_code": "5",
+                            "modifiers": "left_control"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_3",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "6"
+                    },
+                    "to": [
+                        {
+                            "key_code": "6",
+                            "modifiers": "left_control"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_3",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "7"
+                    },
+                    "to": [
+                        {
+                            "key_code": "7",
+                            "modifiers": "left_control"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_3",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "8"
+                    },
+                    "to": [
+                        {
+                            "key_code": "8",
+                            "modifiers": "left_control"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_3",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "9"
+                    },
+                    "to": [
+                        {
+                            "key_code": "9",
+                            "modifiers": "left_control"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_3",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "0"
+                    },
+                    "to": [
+                        {
+                            "key_code": "0",
+                            "modifiers": "left_control"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_3",
+                            "value": 1
+                        }
+                    ]
                 }
             ]
         },
         {
-            "type": "basic",
-            "from": {
-                "key_code": "a"
-            },
-            "to": [
-                {"consumer_key_code": "rewind"}
-            ],
-            "conditions": [
+            "description": "[F18] tab:⏪ international1:⏯️ left_shift:⏩ ",
+            "manipulators": [
                 {
-                "type": "variable_if",
-                "name":"my_modifier_3",
-                "value": 1
-                }
-            ]
-        },
-        {
-            "type": "basic",
-            "from": {
-                "key_code": "s"
-            },
-            "to": [
-                {"consumer_key_code": "play_or_pause"}
-            ],
-            "conditions": [
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f18",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_3",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_3",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
                 {
-                "type": "variable_if",
-                "name": "my_modifier_3",
-                "value": 1
-                }
-            ]
-        },
-        {
-            "type": "basic",
-            "from": {
-                "key_code": "d"
-            },
-            "to": [
-                {"consumer_key_code": "fast_forward"}
-            ],
-            "conditions": [
+                    "type": "basic",
+                    "from": {
+                        "key_code": "tab"
+                    },
+                    "to": [
+                        {
+                            "consumer_key_code": "rewind"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_3",
+                            "value": 1
+                        }
+                    ]
+                },
                 {
-                "type": "variable_if",
-                "name":"my_modifier_3",
-                "value": 1
+                    "type": "basic",
+                    "from": {
+                        "key_code": "international1"
+                    },
+                    "to": [
+                        {
+                            "consumer_key_code": "play_or_pause"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_3",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "left_shift"
+                    },
+                    "to": [
+                        {
+                            "consumer_key_code": "fast_forward"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_3",
+                            "value": 1
+                        }
+                    ]
                 }
             ]
         }
     ]
-        }
-    ]
-} 
+}

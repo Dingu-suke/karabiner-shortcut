@@ -334,6 +334,62 @@
                 {
                     "type": "basic",
                     "from": {
+                        "key_code": "p",
+                        "modifiers": {
+                            "mandatory": ["left_shift"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "f10"},
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "japanese_kana"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "p",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "^en$"
+                            }
+                        ]
+                    }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
                         "key_code": "n",
                         "modifiers": {
                             "mandatory":[],

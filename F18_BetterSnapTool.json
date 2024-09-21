@@ -1,8 +1,8 @@
 {
-    "title": "[F17] BetterSnapTool 用の割り当て",
+    "title": "[F18][BetterSnapTool] 用の割り当て",
     "rules": [
         {
-            "description": "⚠️Simple Modifications で 英数キーを f17 に変換する設定をしてください⚠️",
+            "description": "⚠️Simple Modifications で 英数キーを F18 に変換する設定をしてください⚠️",
             "manipulators": [
                 {
                     "type": "basic",
@@ -17,14 +17,14 @@
                     },
                     "to": [
                         {
-                            "keycode": "f17"
+                            "keycode": "f18"
                         }
                     ]
                 }
             ]
         },
         {
-            "description": "⚠️BetterSnapToolでコードと同様のショートカットを割り当ててください⚠️",
+            "description": "⚠️[BetterSnapTool]でコードと同様のショートカットを割り当ててください⚠️",
             "manipulators": [
                 {
                     "type": "basic",
@@ -39,19 +39,19 @@
                     },
                     "to": [
                         {
-                            "keycode": "f17"
+                            "keycode": "f18"
                         }
                     ]
                 }
             ]
         },
         {
-            "description": "[F17] Q, Z, R, V で ウィンドウを四隅に配置",
+            "description": "[F18][BetterSnapTool] Q, Z, R, V で ウィンドウを四隅に配置",
             "manipulators": [
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "f17",
+                        "key_code": "f18",
                         "modifiers": {
                             "mandatory": [],
                             "optional": [
@@ -62,7 +62,7 @@
                     "to": [
                         {
                             "set_variable": {
-                                "name": "my_modifier_2",
+                                "name": "my_modifier_3",
                                 "value": 1
                             }
                         }
@@ -70,7 +70,7 @@
                     "to_after_key_up": [
                         {
                             "set_variable": {
-                                "name": "my_modifier_2",
+                                "name": "my_modifier_3",
                                 "value": 0
                             }
                         }
@@ -90,13 +90,13 @@
                     "to": [
                         {
                             "key_code": "q",
-                            "modifiers": "right_control"
+                            "modifiers": "right_option"
                         }
                     ],
                     "conditions": [
                         {
                             "type": "variable_if",
-                            "name": "my_modifier_2",
+                            "name": "my_modifier_3",
                             "value": 1
                         }
                     ]
@@ -115,13 +115,13 @@
                     "to": [
                         {
                             "key_code": "z",
-                            "modifiers": "right_control"
+                            "modifiers": "right_option"
                         }
                     ],
                     "conditions": [
                         {
                             "type": "variable_if",
-                            "name": "my_modifier_2",
+                            "name": "my_modifier_3",
                             "value": 1
                         }
                     ]
@@ -140,51 +140,51 @@
                     "to": [
                         {
                             "key_code": "r",
-                            "modifiers": "right_control"
+                            "modifiers": "right_option"
                         }
                     ],
                     "conditions": [
                         {
                             "type": "variable_if",
-                            "name": "my_modifier_2",
+                            "name": "my_modifier_3",
                             "value": 1
                         }
                     ]
                 },
                 {
-                  "type": "basic",
-                  "from": {
-                      "key_code": "v",
-                      "modifiers": {
-                          "mandatory": [],
-                          "optional": [
-                              "any"
-                          ]
-                      }
-                  },
-                  "to": [
-                      {
-                          "key_code": "v",
-                          "modifiers": "right_control"
-                      }
-                  ],
-                  "conditions": [
-                      {
-                          "type": "variable_if",
-                          "name": "my_modifier_2",
-                          "value": 1
-                      }
-                  ]
-              }
+                    "type": "basic",
+                    "from": {
+                        "key_code": "v",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "v",
+                            "modifiers": "right_option"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_3",
+                            "value": 1
+                        }
+                    ]
+                }
             ]
         },
         {
-            "description": "[F17] S で ウィンドウを最大化",
+            "description": "[F18][BetterSnapTool] S で ウィンドウを最大化",
             "manipulators": [
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "f17",
+                        "key_code": "f18",
                         "modifiers": {
                             "mandatory": [],
                             "optional": [
@@ -195,7 +195,7 @@
                     "to": [
                         {
                             "set_variable": {
-                                "name": "my_modifier_2",
+                                "name": "my_modifier_3",
                                 "value": 1
                             }
                         }
@@ -203,7 +203,7 @@
                     "to_after_key_up": [
                         {
                             "set_variable": {
-                                "name": "my_modifier_2",
+                                "name": "my_modifier_3",
                                 "value": 0
                             }
                         }
@@ -223,13 +223,13 @@
                     "to": [
                         {
                             "key_code": "s",
-                            "modifiers": "right_control"
+                            "modifiers": "right_option"
                         }
                     ],
                     "conditions": [
                         {
                             "type": "variable_if",
-                            "name": "my_modifier_2",
+                            "name": "my_modifier_3",
                             "value": 1
                         }
                     ]
@@ -237,12 +237,12 @@
             ]
         },
         {
-            "description": "[F17] A, F でウィンドウを 1/2サイズで配置",
+            "description": "[F18][BetterSnapTool] A, F でウィンドウを 1/2サイズで配置",
             "manipulators": [
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "f17",
+                        "key_code": "f18",
                         "modifiers": {
                             "mandatory": [],
                             "optional": [
@@ -253,7 +253,7 @@
                     "to": [
                         {
                             "set_variable": {
-                                "name": "my_modifier_2",
+                                "name": "my_modifier_3",
                                 "value": 1
                             }
                         }
@@ -261,7 +261,7 @@
                     "to_after_key_up": [
                         {
                             "set_variable": {
-                                "name": "my_modifier_2",
+                                "name": "my_modifier_3",
                                 "value": 0
                             }
                         }
@@ -281,13 +281,13 @@
                     "to": [
                         {
                             "key_code": "a",
-                            "modifiers": "right_control"
+                            "modifiers": "right_option"
                         }
                     ],
                     "conditions": [
                         {
                             "type": "variable_if",
-                            "name": "my_modifier_2",
+                            "name": "my_modifier_3",
                             "value": 1
                         }
                     ]
@@ -306,13 +306,13 @@
                     "to": [
                         {
                             "key_code": "f",
-                            "modifiers": "right_control"
+                            "modifiers": "right_option"
                         }
                     ],
                     "conditions": [
                         {
                             "type": "variable_if",
-                            "name": "my_modifier_2",
+                            "name": "my_modifier_3",
                             "value": 1
                         }
                     ]
@@ -320,12 +320,12 @@
             ]
         },
         {
-            "description": "[F17] E, D, C で ウィンドウを 1/3サイズ で配置",
+            "description": "[F18][BetterSnapTool] E, D, C で ウィンドウを 1/3サイズ で配置",
             "manipulators": [
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "f17",
+                        "key_code": "f18",
                         "modifiers": {
                             "mandatory": [],
                             "optional": [
@@ -336,7 +336,7 @@
                     "to": [
                         {
                             "set_variable": {
-                                "name": "my_modifier_2",
+                                "name": "my_modifier_3",
                                 "value": 1
                             }
                         }
@@ -344,7 +344,7 @@
                     "to_after_key_up": [
                         {
                             "set_variable": {
-                                "name": "my_modifier_2",
+                                "name": "my_modifier_3",
                                 "value": 0
                             }
                         }
@@ -364,13 +364,13 @@
                     "to": [
                         {
                             "key_code": "e",
-                            "modifiers": "right_control"
+                            "modifiers": "right_option"
                         }
                     ],
                     "conditions": [
                         {
                             "type": "variable_if",
-                            "name": "my_modifier_2",
+                            "name": "my_modifier_3",
                             "value": 1
                         }
                     ]
@@ -389,13 +389,13 @@
                     "to": [
                         {
                             "key_code": "d",
-                            "modifiers": "right_control"
+                            "modifiers": "right_option"
                         }
                     ],
                     "conditions": [
                         {
                             "type": "variable_if",
-                            "name": "my_modifier_2",
+                            "name": "my_modifier_3",
                             "value": 1
                         }
                     ]
@@ -414,13 +414,13 @@
                     "to": [
                         {
                             "key_code": "c",
-                            "modifiers": "right_control"
+                            "modifiers": "right_option"
                         }
                     ],
                     "conditions": [
                         {
                             "type": "variable_if",
-                            "name": "my_modifier_2",
+                            "name": "my_modifier_3",
                             "value": 1
                         }
                     ]
@@ -428,12 +428,12 @@
             ]
         },
         {
-            "description": "[F17] W, X で ウィンドウを 2/3サイズ で配置",
+            "description": "[F18][BetterSnapTool] W, X で ウィンドウを 2/3サイズ で配置",
             "manipulators": [
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "f17",
+                        "key_code": "f18",
                         "modifiers": {
                             "mandatory": [],
                             "optional": [
@@ -444,7 +444,7 @@
                     "to": [
                         {
                             "set_variable": {
-                                "name": "my_modifier_2",
+                                "name": "my_modifier_3",
                                 "value": 1
                             }
                         }
@@ -452,7 +452,7 @@
                     "to_after_key_up": [
                         {
                             "set_variable": {
-                                "name": "my_modifier_2",
+                                "name": "my_modifier_3",
                                 "value": 0
                             }
                         }
@@ -472,13 +472,13 @@
                     "to": [
                         {
                             "key_code": "w",
-                            "modifiers": "right_control"
+                            "modifiers": "right_option"
                         }
                     ],
                     "conditions": [
                         {
                             "type": "variable_if",
-                            "name": "my_modifier_2",
+                            "name": "my_modifier_3",
                             "value": 1
                         }
                     ]
@@ -497,13 +497,13 @@
                     "to": [
                         {
                             "key_code": "x",
-                            "modifiers": "right_control"
+                            "modifiers": "right_option"
                         }
                     ],
                     "conditions": [
                         {
                             "type": "variable_if",
-                            "name": "my_modifier_2",
+                            "name": "my_modifier_3",
                             "value": 1
                         }
                     ]
