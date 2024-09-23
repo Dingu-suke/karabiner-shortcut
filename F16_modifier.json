@@ -1235,6 +1235,33 @@
                             }
                         }
                     ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "q",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "a",
+                            "modifiers": [
+                                "left_command", "left_shift"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        }
+                    ]
                 }
             ]
         },
@@ -1482,58 +1509,282 @@
             ]
         },
         {
-          "description": "[F16] スペースバー cmd クリック",
-          "manipulators": [
-              {
-                  "type": "basic",
-                  "from": {
-                      "key_code": "f16",
-                      "modifiers": {
-                          "mandatory": [],
-                          "optional": ["any"]
-                      }
-                  },
-                  "to": [
-                      {
-                          "set_variable": {
-                              "name": "my_modifier_1",
-                              "value": 1
-                          }
-                      }
-                  ],
-                  "to_after_key_up": [
-                      {
-                          "set_variable": {
-                              "name": "my_modifier_1",
-                              "value": 0
-                          }
-                      }
-                  ]
-              },
-              {
-                  "type": "basic",
-                  "from": {
-                      "key_code": "spacebar",
-                      "modifiers": {
-                          "mandatory": [],
-                          "optional": ["any"]
-                      }
-                  },
-                  "to": [
-                      {
-                          "pointing_button": "button1",
-                          "modifiers": ["left_command"]
-                      }
-                  ],
-                  "conditions": [
-                      {
-                          "type": "variable_if",
-                          "name": "my_modifier_1",
-                          "value": 1
-                      }
-                  ]
-              }
-          ]
-      }
+            "description": "[F16] スペースバー cmd クリック",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f16",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_1",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_1",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "spacebar",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "pointing_button": "button1",
+                            "modifiers": [
+                                "left_command"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[F16] international => 半角ピリオド ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f16",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_1",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_1",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "international1",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "period"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "language": "^en$"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "international1",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "japanese_eisuu"
+                        },
+                        {
+                            "key_code": "period"
+                        },
+                        {
+                            "key_code": "japanese_kana"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[F16] tab ctr+↓ ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "key_code": "f16",
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_1",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_1",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "tab",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "down_arrow",
+                            "modifiers": "right_control"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[F16] Enter delete_forward ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "key_code": "f16",
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_1",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_1",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "return_or_enter",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "delete_forward"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }
