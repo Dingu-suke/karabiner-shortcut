@@ -245,9 +245,96 @@
                     ]
                 }
             ]
-        },
+        }, 
         {
-            "description": "[F18] tab:⏪ international1:⏯️ left_shift:⏩ ",
+            "description": "j=> rewind, k=> stop/start, l=> skip",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f18",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_3",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_3",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "j"
+                    },
+                    "to": [
+                        {
+                            "consumer_key_code": "rewind"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_3",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "k"
+                    },
+                    "to": [
+                        {
+                            "consumer_key_code": "play_or_pause"
+                        }
+                    ], 
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_3",
+                            "value": 1
+                        }
+                    ]
+                }, 
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "l"
+                    },
+                    "to": [
+                        {
+                            "consumer_key_code": "fast_forward"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_3",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "description": "[F18] tab=> rewind, ctr=> play/pause, shift=> skip ",
             "manipulators": [
                 {
                     "type": "basic",
@@ -304,7 +391,7 @@
                         {
                             "consumer_key_code": "play_or_pause"
                         }
-                    ],
+                    ], 
                     "conditions": [
                         {
                             "type": "variable_if",
@@ -312,7 +399,7 @@
                             "value": 1
                         }
                     ]
-                },
+                }, 
                 {
                     "type": "basic",
                     "from": {

@@ -152,7 +152,7 @@
                     ],
                     "conditions": [
                         {
-                            "type": "variable_if",
+                            "type": "variable_if", 
                             "name":"my_modifier_2",
                             "value": 1
                         }
@@ -285,7 +285,63 @@
                         }
                     },
                     "to": [
-                        {"key_code": "f10"},
+                        {"key_code": "f10"},                        
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "japanese_kana"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "ja"
+                            }
+                        ]
+                    }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "p",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "^en$"
+                            }
+                        ]
+                    }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "p",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "f10", "modifiers": ["left_shift"]},
                         {"key_code": "japanese_eisuu"},
                         {"key_code": "japanese_kana"}
                     ],
@@ -341,7 +397,7 @@
                         }
                     },
                     "to": [
-                        {"key_code": "f10"},
+                        {"key_code": "f10", "modifiers": ["left_shift"]},
                         {"key_code": "japanese_eisuu"},
                         {"key_code": "japanese_kana"}
                     ],
@@ -412,7 +468,7 @@
             ]    
         },
         {
-            "description":"[F17] , ▶ , カンマとスペース ",
+            "description":"[F17] コンマを <, ピリオドを> にする ",
             "manipulators": [
                 {
                     "type": "basic",
@@ -451,8 +507,7 @@
                     },
                     "to": [
                         {"key_code": "japanese_eisuu"},
-                        {"key_code": "comma"},
-                        {"key_code": "spacebar"},
+                        {"key_code": "comma", "modifiers": "shift"},
                         {"key_code": "japanese_kana"}
                     ],
                     "conditions": [
@@ -481,8 +536,65 @@
                         }
                     },
                     "to": [
-                        {"key_code": "comma"},
-                        {"key_code": "spacebar"}
+                        {"key_code": "comma", "modifiers": "shift"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                "language": "^en$"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "period",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "period", "modifiers": "shift"},
+                        {"key_code": "japanese_kana"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "period",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "period", "modifiers": "shift"}
                     ],
                     "conditions": [
                         {
@@ -644,271 +756,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "description": "[F17] 5 ▶ docker compose exec ",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "f17",
-                        "modifiers": {
-                            "mandatory":[],
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {
-                            "set_variable": {
-                                "name": "my_modifier_2",
-                                "value":1
-                            }
-                        }
-                    ],
-                    "to_after_key_up": [
-                        {
-                            "set_variable": {
-                                "name":"my_modifier_2",
-                                "value": 0
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "5",
-                        "modifiers": {
-                            "mandatory":[],
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {"key_code": "japanese_eisuu"},
-                        {"key_code": "d"},
-                        {"key_code": "o"},
-                        {"key_code": "c"},
-                        {"key_code": "k"},
-                        {"key_code": "e"},
-                        {"key_code": "r"},
-
-                        {"key_code": "spacebar"},                        
-
-                        {"key_code": "c"},
-                        {"key_code": "o"},
-                        {"key_code": "m"},
-                        {"key_code": "p"},
-                        {"key_code": "o"},
-                        {"key_code": "s"},
-                        {"key_code": "e"},
-
-                        {"key_code": "spacebar"},
-                        
-                        {"key_code": "e"},
-                        {"key_code": "x"},
-                        {"key_code": "e"},
-                        {"key_code": "c"},
-                        {"key_code": "japanese_kana"}
-
-                    ],
-                    "conditions": [
-                        {
-                            
-                            "type": "variable_if",
-                            "name": "my_modifier_2",
-                            "value": 1
-                        },
-                        {
-                        "type": "input_source_if",
-                        "input_sources": [
-                            {
-                            "language": "ja"
-                            }
-                        ]
-                    }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "5",
-                        "modifiers": {
-                            "mandatory":[],
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {"key_code": "d"},
-                        {"key_code": "o"},
-                        {"key_code": "c"},
-                        {"key_code": "k"},
-                        {"key_code": "e"},
-                        {"key_code": "r"},
-
-                        {"key_code": "spacebar"},
-                        
-                        {"key_code": "c"},
-                        {"key_code": "o"},
-                        {"key_code": "m"},
-                        {"key_code": "p"},
-                        {"key_code": "o"},
-                        {"key_code": "s"},
-                        {"key_code": "e"},
-
-                        {"key_code": "spacebar"},
-                        
-                        {"key_code": "e"},
-                        {"key_code": "x"},
-                        {"key_code": "e"},
-                        {"key_code": "c"}
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name":"my_modifier_2",
-                            "value": 1
-                        },
-                        {
-                        "type": "input_source_if",
-                        "input_sources": [
-                            {
-                            "language": "^en$"
-                            }
-                        ]
-                        }
-                    ]
-                }
-            ]    
-        },
-        {
-            "description": "[F17] 6 ▶ git commit -m'' ",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "f17",
-                        "modifiers": {
-                            "mandatory":[],
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {
-                            "set_variable": {
-                                "name": "my_modifier_2",
-                                "value":1
-                            }
-                        }
-                    ],
-                    "to_after_key_up": [
-                        {
-                            "set_variable": {
-                                "name":"my_modifier_2",
-                                "value": 0
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "6",
-                        "modifiers": {
-                            "mandatory":[],
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {"key_code": "japanese_eisuu"},
-                        {"key_code": "g"},
-                        {"key_code": "i"},
-                        {"key_code": "t"},
-                        
-                        {"key_code": "spacebar"},                        
-                        
-                        {"key_code": "c"},
-                        {"key_code": "o"},
-                        {"key_code": "m"},
-                        {"key_code": "m"},
-                        {"key_code": "i"},
-                        {"key_code": "t"},
-
-                        {"key_code": "spacebar"},
-                        
-                        {"key_code":"hyphen"},
-                        {"key_code":"m"},
-                        {"key_code":"7", "modifiers":"left_shift"},
-                        {"key_code":"7", "modifiers":"left_shift"},
-                        {"key_code": "left_arrow"},
-
-                        {"key_code": "japanese_kana"}
-
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "my_modifier_2",
-                            "value": 1
-                        },
-                        {
-                        "type": "input_source_if",
-                        "input_sources": [
-                            {
-                            "language": "ja"
-                            }
-                        ]
-                    }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "6",
-                        "modifiers": {
-                            "mandatory":[],
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {"key_code": "g"},
-                        {"key_code": "i"},
-                        {"key_code": "t"},
-
-                        {"key_code": "spacebar"},                      
-                        
-                        {"key_code": "c"},
-                        {"key_code": "o"},
-                        {"key_code": "m"},
-                        {"key_code": "m"},
-                        {"key_code": "i"},
-                        {"key_code": "t"},
-
-                        {"key_code": "spacebar"},
-                        
-                        {"key_code":"hyphen"},
-                        {"key_code":"m"},
-                        {"key_code":"7", "modifiers":"left_shift"},
-                        {"key_code":"7", "modifiers":"left_shift"},
-                        
-                        {"key_code": "left_arrow"}
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name":"my_modifier_2",
-                            "value": 1
-                        },
-                        {
-                        "type": "input_source_if",
-                        "input_sources": [
-                            {
-                            "language": "^en$"
-                            }
-                        ]
-                        }
-                    ]
-                }
-            ]    
         },
         {
             "description": "[F17] + 9 => かな、英数",
@@ -1081,7 +928,84 @@
                     }
                 ]
             }
-        ]}
+        ]},
+        {
+            "description": "[F17] z ▶ cmd z, x ▶ cmd shift z ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f17",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_2",
+                                "value":1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name":"my_modifier_2",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "z",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "z", 
+                            "modifiers": "left_command"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "x",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "z", 
+                            "modifiers": ["left_command" ,"left_shift"]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }
 

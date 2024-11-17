@@ -2,7 +2,7 @@
     "title": "F16 修飾キー化",
     "rules": [
         {
-            "description": "⚠️Simple Modifications で 英数キーを F16 に変換する設定をしてください⚠️",
+            "description": "⚠️Simple Modifications で 英数キーを F16 に変換する設定をしてください⚠️ F17の設定より下においてください。",
             "manipulators": [
                 {
                     "type": "basic",
@@ -59,7 +59,7 @@
                     "from": {
                         "key_code": "a",
                         "modifiers": {
-                            "mandatory": [],
+                            "mandatory": ["shift"],
                             "optional": [
                                 "any"
                             ]
@@ -67,7 +67,47 @@
                     },
                     "to": [
                         {
-                            "key_code": "1"
+                            "key_code": "japanese_eisuu"
+                        },
+                        {
+                            "key_code": "1",
+                            "modifiers": ["left_shift"]
+                        },
+                        {
+                            "key_code": "japanese_kana"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "a",
+                        "modifiers": {
+                            "mandatory": ["shift"],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "1",
+                            "modifiers": ["left_shift"]
                         }
                     ],
                     "conditions": [
@@ -99,10 +139,35 @@
                     },
                     "to": [
                         {
-                            "key_code": "japanese_eisuu"
-                        },
-                        {
                             "key_code": "1"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "s",
+                        "modifiers": {
+                            "mandatory": ["shift"],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "japanese_eisuu"
+                        },
+                        {
+                            "key_code": "2",
+                            "modifiers": ["left_shift"]
                         },
                         {
                             "key_code": "japanese_kana"
@@ -129,7 +194,7 @@
                     "from": {
                         "key_code": "s",
                         "modifiers": {
-                            "mandatory": [],
+                            "mandatory": ["shift"],
                             "optional": [
                                 "any"
                             ]
@@ -137,7 +202,8 @@
                     },
                     "to": [
                         {
-                            "key_code": "2"
+                            "key_code": "2",
+                            "modifiers": ["left_shift"]
                         }
                     ],
                     "conditions": [
@@ -169,10 +235,35 @@
                     },
                     "to": [
                         {
-                            "key_code": "japanese_eisuu"
-                        },
-                        {
                             "key_code": "2"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "d",
+                        "modifiers": {
+                            "mandatory": ["shift"],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "japanese_eisuu"
+                        },
+                        {
+                            "key_code": "3",
+                            "modifiers": ["left_shift"]
                         },
                         {
                             "key_code": "japanese_kana"
@@ -199,7 +290,7 @@
                     "from": {
                         "key_code": "d",
                         "modifiers": {
-                            "mandatory": [],
+                            "mandatory": ["shift"],
                             "optional": [
                                 "any"
                             ]
@@ -207,7 +298,8 @@
                     },
                     "to": [
                         {
-                            "key_code": "3"
+                            "key_code": "3",
+                            "modifiers": ["left_shift"]
                         }
                     ],
                     "conditions": [
@@ -239,10 +331,35 @@
                     },
                     "to": [
                         {
-                            "key_code": "japanese_eisuu"
-                        },
-                        {
                             "key_code": "3"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f",
+                        "modifiers": {
+                            "mandatory": ["shift"],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "japanese_eisuu"
+                        },
+                        {
+                            "key_code": "4",
+                            "modifiers": ["left_shift"]
                         },
                         {
                             "key_code": "japanese_kana"
@@ -269,7 +386,7 @@
                     "from": {
                         "key_code": "f",
                         "modifiers": {
-                            "mandatory": [],
+                            "mandatory": ["shift"],
                             "optional": [
                                 "any"
                             ]
@@ -277,7 +394,8 @@
                     },
                     "to": [
                         {
-                            "key_code": "4"
+                            "key_code": "4",
+                            "modifiers": ["left_shift"]
                         }
                     ],
                     "conditions": [
@@ -309,10 +427,35 @@
                     },
                     "to": [
                         {
-                            "key_code": "japanese_eisuu"
-                        },
-                        {
                             "key_code": "4"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "g",
+                        "modifiers": {
+                            "mandatory": ["shift"],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "japanese_eisuu"
+                        },
+                        {
+                            "key_code": "5",
+                            "modifiers": ["left_shift"]
                         },
                         {
                             "key_code": "japanese_kana"
@@ -339,7 +482,7 @@
                     "from": {
                         "key_code": "g",
                         "modifiers": {
-                            "mandatory": [],
+                            "mandatory": ["shift"],
                             "optional": [
                                 "any"
                             ]
@@ -347,7 +490,8 @@
                     },
                     "to": [
                         {
-                            "key_code": "5"
+                            "key_code": "5",
+                            "modifiers": ["left_shift"]
                         }
                     ],
                     "conditions": [
@@ -379,10 +523,35 @@
                     },
                     "to": [
                         {
-                            "key_code": "japanese_eisuu"
-                        },
-                        {
                             "key_code": "5"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "h",
+                        "modifiers": {
+                            "mandatory": ["shift"],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "japanese_eisuu"
+                        },
+                        {
+                            "key_code": "6",
+                            "modifiers": ["left_shift"]
                         },
                         {
                             "key_code": "japanese_kana"
@@ -409,7 +578,7 @@
                     "from": {
                         "key_code": "h",
                         "modifiers": {
-                            "mandatory": [],
+                            "mandatory": ["shift"],
                             "optional": [
                                 "any"
                             ]
@@ -417,7 +586,8 @@
                     },
                     "to": [
                         {
-                            "key_code": "6"
+                            "key_code": "6",
+                            "modifiers": ["left_shift"]
                         }
                     ],
                     "conditions": [
@@ -449,10 +619,35 @@
                     },
                     "to": [
                         {
-                            "key_code": "japanese_eisuu"
-                        },
-                        {
                             "key_code": "6"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "j",
+                        "modifiers": {
+                            "mandatory": ["shift"],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "japanese_eisuu"
+                        },
+                        {
+                            "key_code": "7",
+                            "modifiers": ["left_shift"]
                         },
                         {
                             "key_code": "japanese_kana"
@@ -479,7 +674,7 @@
                     "from": {
                         "key_code": "j",
                         "modifiers": {
-                            "mandatory": [],
+                            "mandatory": ["shift"],
                             "optional": [
                                 "any"
                             ]
@@ -487,7 +682,8 @@
                     },
                     "to": [
                         {
-                            "key_code": "7"
+                            "key_code": "7",
+                            "modifiers": ["left_shift"]
                         }
                     ],
                     "conditions": [
@@ -519,10 +715,35 @@
                     },
                     "to": [
                         {
-                            "key_code": "japanese_eisuu"
-                        },
-                        {
                             "key_code": "7"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "k",
+                        "modifiers": {
+                            "mandatory": ["shift"],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "japanese_eisuu"
+                        },
+                        {
+                            "key_code": "8",
+                            "modifiers": ["left_shift"]
                         },
                         {
                             "key_code": "japanese_kana"
@@ -549,7 +770,7 @@
                     "from": {
                         "key_code": "k",
                         "modifiers": {
-                            "mandatory": [],
+                            "mandatory": ["shift"],
                             "optional": [
                                 "any"
                             ]
@@ -557,7 +778,8 @@
                     },
                     "to": [
                         {
-                            "key_code": "8"
+                            "key_code": "8",
+                            "modifiers": ["left_shift"]
                         }
                     ],
                     "conditions": [
@@ -589,10 +811,35 @@
                     },
                     "to": [
                         {
-                            "key_code": "japanese_eisuu"
-                        },
-                        {
                             "key_code": "8"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": ["shift"],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "japanese_eisuu"
+                        },
+                        {
+                            "key_code": "9",
+                            "modifiers": ["left_shift"]
                         },
                         {
                             "key_code": "japanese_kana"
@@ -619,7 +866,7 @@
                     "from": {
                         "key_code": "l",
                         "modifiers": {
-                            "mandatory": [],
+                            "mandatory": ["shift"],
                             "optional": [
                                 "any"
                             ]
@@ -627,7 +874,8 @@
                     },
                     "to": [
                         {
-                            "key_code": "9"
+                            "key_code": "9",
+                            "modifiers": ["left_shift"]
                         }
                     ],
                     "conditions": [
@@ -659,10 +907,35 @@
                     },
                     "to": [
                         {
+                            "key_code": "9"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "semicolon",
+                        "modifiers": {
+                            "mandatory": ["shift"],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
                             "key_code": "japanese_eisuu"
                         },
                         {
-                            "key_code": "9"
+                            "key_code": "0",
+                            "modifiers": ["left_shift"]
                         },
                         {
                             "key_code": "japanese_kana"
@@ -689,7 +962,7 @@
                     "from": {
                         "key_code": "semicolon",
                         "modifiers": {
-                            "mandatory": [],
+                            "mandatory": ["shift"],
                             "optional": [
                                 "any"
                             ]
@@ -697,7 +970,8 @@
                     },
                     "to": [
                         {
-                            "key_code": "0"
+                            "key_code": "0",
+                            "modifiers": ["left_shift"]
                         }
                     ],
                     "conditions": [
@@ -729,13 +1003,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "japanese_eisuu"
-                        },
-                        {
                             "key_code": "0"
-                        },
-                        {
-                            "key_code": "japanese_kana"
                         }
                     ],
                     "conditions": [
@@ -743,17 +1011,9 @@
                             "type": "variable_if",
                             "name": "my_modifier_1",
                             "value": 1
-                        },
-                        {
-                            "type": "input_source_if",
-                            "input_sources": [
-                                {
-                                    "language": "ja"
-                                }
-                            ]
                         }
                     ]
-                },
+                },                
                 {
                     "type": "basic",
                     "from": {
@@ -931,6 +1191,80 @@
                         }
                     ]
                 },
+
+
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "non_us_pound",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "equal_sign"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "language": "^en$"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "non_us_pound",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "japanese_eisuu"
+                        },
+                        {
+                            "key_code": "equal_sign"
+                        },
+                        {
+                            "key_code": "japanese_kana"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                },
+
+
                 {
                     "type": "basic",
                     "from": {
@@ -1235,11 +1569,38 @@
                             }
                         }
                     ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "q",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "a",
+                            "modifiers": [
+                                "left_command", "left_shift"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        }
+                    ]
                 }
             ]
         },
         {
-            "description": "[F16] c コピー",
+            "description": "[F16] c urlコピー",
             "manipulators": [
                 {
                     "type": "basic",
@@ -1282,11 +1643,17 @@
                     },
                     "to": [
                         {
+                            "key_code": "l",
+                            "modifiers": ["left_command"]
+                        },
+                        {
                             "key_code": "c",
-                            "modifiers": [
-                                "left_command"
-                            ]
+                            "modifiers": ["left_command"]
+                        },
+                        {
+                            "key_code": "escape"
                         }
+
                     ],
                     "conditions": [
                         {
@@ -1299,7 +1666,7 @@
             ]
         },
         {
-            "description": "[F16] v コピー",
+            "description": "[F16] v 新しいタブ",
             "manipulators": [
                 {
                     "type": "basic",
@@ -1342,7 +1709,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "v",
+                            "key_code": "t",
                             "modifiers": [
                                 "left_command"
                             ]
@@ -1482,58 +1849,280 @@
             ]
         },
         {
-          "description": "[F16] スペースバー cmd クリック",
-          "manipulators": [
-              {
-                  "type": "basic",
-                  "from": {
-                      "key_code": "f16",
-                      "modifiers": {
-                          "mandatory": [],
-                          "optional": ["any"]
-                      }
-                  },
-                  "to": [
-                      {
-                          "set_variable": {
-                              "name": "my_modifier_1",
-                              "value": 1
-                          }
-                      }
-                  ],
-                  "to_after_key_up": [
-                      {
-                          "set_variable": {
-                              "name": "my_modifier_1",
-                              "value": 0
-                          }
-                      }
-                  ]
-              },
-              {
-                  "type": "basic",
-                  "from": {
-                      "key_code": "spacebar",
-                      "modifiers": {
-                          "mandatory": [],
-                          "optional": ["any"]
-                      }
-                  },
-                  "to": [
-                      {
-                          "pointing_button": "button1",
-                          "modifiers": ["left_command"]
-                      }
-                  ],
-                  "conditions": [
-                      {
-                          "type": "variable_if",
-                          "name": "my_modifier_1",
-                          "value": 1
-                      }
-                  ]
-              }
-          ]
-      }
+            "description": "[F16] スペースバー cmd クリック",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f16",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_1",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_1",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "spacebar",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "pointing_button": "button1",
+                            "modifiers": [
+                                "left_command"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[F16] international => 半角ピリオド ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f16",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_1",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_1",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "international1",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "period"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "language": "^en$"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "international1",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "japanese_eisuu"
+                        },
+                        {
+                            "key_code": "period"
+                        },
+                        {
+                            "key_code": "japanese_kana"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[F16] f12 ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "key_code": "f16",
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_1",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_1",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "return_or_enter",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "f12"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "description": "[F16][次のウィンドウ] Tab",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f17",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_1",
+                                "value":1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_1",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "tab",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "open_bracket",
+                            "modifiers": ["left_command", "left_shift"]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_1",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }
