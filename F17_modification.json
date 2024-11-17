@@ -152,7 +152,7 @@
                     ],
                     "conditions": [
                         {
-                            "type": "variable_if",
+                            "type": "variable_if", 
                             "name":"my_modifier_2",
                             "value": 1
                         }
@@ -285,7 +285,63 @@
                         }
                     },
                     "to": [
-                        {"key_code": "f10"},
+                        {"key_code": "f10"},                        
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "japanese_kana"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "ja"
+                            }
+                        ]
+                    }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "p",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "^en$"
+                            }
+                        ]
+                    }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "p",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "f10", "modifiers": ["left_shift"]},
                         {"key_code": "japanese_eisuu"},
                         {"key_code": "japanese_kana"}
                     ],
@@ -341,7 +397,7 @@
                         }
                     },
                     "to": [
-                        {"key_code": "f10"},
+                        {"key_code": "f10", "modifiers": ["left_shift"]},
                         {"key_code": "japanese_eisuu"},
                         {"key_code": "japanese_kana"}
                     ],
@@ -412,7 +468,7 @@
             ]    
         },
         {
-            "description":"[F17] , ▶ , ",
+            "description":"[F17] コンマを <, ピリオドを> にする ",
             "manipulators": [
                 {
                     "type": "basic",
@@ -451,7 +507,7 @@
                     },
                     "to": [
                         {"key_code": "japanese_eisuu"},
-                        {"key_code": "comma"},
+                        {"key_code": "comma", "modifiers": "shift"},
                         {"key_code": "japanese_kana"}
                     ],
                     "conditions": [
@@ -480,8 +536,65 @@
                         }
                     },
                     "to": [
-                        {"key_code": "comma"},
-                        {"key_code": "spacebar"}
+                        {"key_code": "comma", "modifiers": "shift"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                "language": "^en$"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "period",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "period", "modifiers": "shift"},
+                        {"key_code": "japanese_kana"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "period",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "period", "modifiers": "shift"}
                     ],
                     "conditions": [
                         {
