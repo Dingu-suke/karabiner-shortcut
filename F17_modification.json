@@ -397,7 +397,7 @@
                         }
                     },
                     "to": [
-                        {"key_code": "f10", "modifiers": ["left_shift"]},
+                        {"key_code": "f10"},
                         {"key_code": "japanese_eisuu"},
                         {"key_code": "japanese_kana"}
                     ],
