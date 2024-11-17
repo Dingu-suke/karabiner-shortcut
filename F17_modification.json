@@ -336,12 +336,12 @@
                     "from": {
                         "key_code": "p",
                         "modifiers": {
-                            "mandatory":[],
+                            "mandatory":["left_shift"],
                             "optional": ["any"]
                         }
                     },
                     "to": [
-                        {"key_code": "f10", "modifiers": ["left_shift"]},
+                        {"key_code": "f10"},
                         {"key_code": "japanese_eisuu"},
                         {"key_code": "japanese_kana"}
                     ],
@@ -366,7 +366,7 @@
                     "from": {
                         "key_code": "p",
                         "modifiers": {
-                            "mandatory":[],
+                            "mandatory":["left_shift"],
                             "optional": ["any"]
                         }
                     },
