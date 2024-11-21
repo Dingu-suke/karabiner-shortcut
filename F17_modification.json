@@ -252,6 +252,34 @@
                 {
                     "type": "basic",
                     "from": {
+                        "key_code": "f10",
+                        "modifiers": {
+                            "mandatory": ["left_shift"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "f10"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
                         "key_code": "f17",
                         "modifiers": {
                             "mandatory":[],
@@ -336,12 +364,12 @@
                     "from": {
                         "key_code": "p",
                         "modifiers": {
-                            "mandatory":[],
+                            "mandatory":["left_shift"],
                             "optional": ["any"]
                         }
                     },
                     "to": [
-                        {"key_code": "f10", "modifiers": ["left_shift"]},
+                        {"key_code": "f10"},
                         {"key_code": "japanese_eisuu"},
                         {"key_code": "japanese_kana"}
                     ],
@@ -366,7 +394,7 @@
                     "from": {
                         "key_code": "p",
                         "modifiers": {
-                            "mandatory":[],
+                            "mandatory":["left_shift"],
                             "optional": ["any"]
                         }
                     },
@@ -397,7 +425,7 @@
                         }
                     },
                     "to": [
-                        {"key_code": "f10", "modifiers": ["left_shift"]},
+                        {"key_code": "f10"},
                         {"key_code": "japanese_eisuu"},
                         {"key_code": "japanese_kana"}
                     ],
