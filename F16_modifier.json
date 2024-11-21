@@ -1191,8 +1191,6 @@
                         }
                     ]
                 },
-
-
                 {
                     "type": "basic",
                     "from": {
@@ -1278,7 +1276,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "international3"
+                            "key_code": "international3", "modifiers": "left_option"
                         }
                     ],
                     "conditions": [
@@ -1313,7 +1311,7 @@
                             "key_code": "japanese_eisuu"
                         },
                         {
-                            "key_code": "international3"
+                            "key_code": "international3", "modifiers": "left_option"
                         },
                         {
                             "key_code": "japanese_kana"
