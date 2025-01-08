@@ -786,7 +786,7 @@
             ]
         },
         {
-            "description": "[F17] + 9 => かな、英数",
+            "description": "[F17] + hyphen => かな、英数",
             "manipulators": [
                 {
                     "type": "basic",
@@ -817,7 +817,7 @@
             {
                 "type": "basic",
                 "from": {
-                    "key_code": "9",
+                    "key_code": "hyphen",
                     "modifiers": {
                         "mandatory":[],
                         "optional": ["any"]
@@ -845,7 +845,7 @@
             {
                 "type": "basic",
                 "from": {
-                    "key_code": "9",
+                    "key_code": "hyphen",
                     "modifiers": {
                         "mandatory":[],
                         "optional": ["any"]
@@ -1033,7 +1033,59 @@
                     ]
                 }
             ]
+        },
+        {
+            "description": "[F17] + space => caps_lock ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f17",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_2",
+                                "value":1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name":"my_modifier_2",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "9",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "caps_lock"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
-

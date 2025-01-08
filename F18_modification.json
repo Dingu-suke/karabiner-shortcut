@@ -334,7 +334,7 @@
             ]
         }, 
         {
-            "description": "[F18] tab=> rewind, ctr=> play/pause, shift=> skip ",
+            "description": "[F18] tab=> rewind, ctr=> play/pause, shift=> caps_lock ",
             "manipulators": [
                 {
                     "type": "basic",
