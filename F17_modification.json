@@ -20,7 +20,7 @@
             ]
         },
         {
-            "description": "[F17] i,m,j,k ▶ 上下左右 / u, o 最右左端 / enter ▶ backspace / h l ▶ option 左 右 ",
+            "description": "[F17] i,m,j,k ▶ 上下左右 / u, o 最右左端 / enter ▶ backspace / h l ▶ option 左 右 / y ▶ escape",
             "manipulators": [
                 {
                     "type": "basic",
@@ -235,6 +235,26 @@
                     },
                     "to": [
                         { "key_code": "right_arrow", "modifiers": "left_option" }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name":"my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "y",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        { "key_code": "escape" }
                     ],
                     "conditions": [
                         {
@@ -496,7 +516,7 @@
             ]    
         },
         {
-            "description":"[F17] コンマを <, ピリオドを> にする ",
+            "description":"[F17] コンマを <, ピリオドを> 、/ を ? にする ",
             "manipulators": [
                 {
                     "type": "basic",
@@ -639,6 +659,62 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "slash",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "slash", "modifiers": "left_shift"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                "language": "^en$"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "shash",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "japanese_eisuu"}
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        },
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]    
         },
@@ -728,7 +804,7 @@
                         ]
                         }
                     ]
-                }                
+                }
             ]
         },
         {
@@ -1086,6 +1162,152 @@
                     ]
                 }
             ]
-        }
+        },
+        {
+            "description": "[F17] + ;(セミコロン) => :(コロンl , : => = ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                    "modifiers": {
+                        "key_code": "f17",
+                        "mandatory":[],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [
+                    {
+                        "set_variable": {
+                        "name": "my_modifier_2",
+                        "value":1
+                        }
+                    }
+                ],
+                "to_after_key_up": [
+                    {
+                        "set_variable": {
+                        "name":"my_modifier_2",
+                        "value": 0
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "semicolon",
+                    "modifiers": {
+                        "mandatory":[],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [
+                    { "key_code": "quote" }
+                ],
+                "conditions": [
+                    {
+                    "type": "variable_if",
+                    "name":"my_modifier_2",
+                    "value": 1
+                    },
+                    {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "^en$"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "semicolon",
+                    "modifiers": {
+                        "mandatory":[],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [
+                    { "key_code": "japanese_eisuu" },
+                    { "key_code": "quote" },
+                    { "key_code": "japanese_kana" }
+                ],
+                "conditions": [
+                    {
+                    "type": "variable_if",
+                    "name":"my_modifier_2",
+                    "value": 1
+                    },
+                    {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "ja"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "quote",
+                    "modifiers": {
+                        "mandatory":[],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [
+                    { "key_code": "hyphen", "modifiers": "left_shift" }
+                ],
+                "conditions": [
+                    {
+                    "type": "variable_if",
+                    "name":"my_modifier_2",
+                    "value": 1
+                    },
+                    {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "^en$"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "quote",
+                    "modifiers": {
+                        "mandatory":[],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [
+                    { "key_code": "japanese_eisuu" },
+                    { "key_code": "hyphen", "modifiers": "left_shift" },
+                    { "key_code": "japanese_kana" }
+                ],
+                "conditions": [
+                    {
+                    "type": "variable_if",
+                    "name":"my_modifier_2",
+                    "value": 1
+                    },
+                    {
+                        "type": "input_source_if",
+                        "input_sources": [
+                            {
+                            "language": "ja"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]}
     ]
 }
