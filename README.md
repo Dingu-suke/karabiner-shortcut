@@ -41,4 +41,4 @@ Karabiner Elements の GUI を操作し、次のようにシンプルな割り�
 
 #### F18をレイヤーキーとするレイヤー
 主に、Raycast などのアプリケーションでショートカットを割り当てるために用意しました。
-![alt text](image-5.png)
+![alt text](image-6.png)
