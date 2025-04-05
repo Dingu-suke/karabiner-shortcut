@@ -1,0 +1,34 @@
+{
+  "title": "iterm2での ⌘ の挙動を変更する",
+    "rules": [
+      {
+        "description": "Command+Arrow for Neovim navigation in iTerm2",
+        "manipulators": [
+          {
+            "type": "basic",
+            "from": { "key_code": "left_arrow", "modifiers": { "mandatory": ["command"] } },
+            "to": [{ "key_code": "escape" }, { "key_code": "0" }],
+            "conditions": [{ "type": "frontmost_application_if", "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"] }]
+          },
+          {
+            "type": "basic",
+            "from": { "key_code": "right_arrow", "modifiers": { "mandatory": ["command"] } },
+            "to": [{ "key_code": "escape" }, { "key_code": "dollar_sign" }],
+            "conditions": [{ "type": "frontmost_application_if", "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"] }]
+          },
+          {
+            "type": "basic",
+            "from": { "key_code": "up_arrow", "modifiers": { "mandatory": ["command"] } },
+            "to": [{ "key_code": "escape" }, { "key_code": "g" }, { "key_code": "g" }],
+            "conditions": [{ "type": "frontmost_application_if", "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"] }]
+          },
+          {
+            "type": "basic",
+            "from": { "key_code": "down_arrow", "modifiers": { "mandatory": ["command"] } },
+            "to": [{ "key_code": "escape" }, { "key_code": "g" }, { "key_code": "shift_g" }],
+            "conditions": [{ "type": "frontmost_application_if", "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"] }]
+          }
+        ]
+      }
+  ]
+}
