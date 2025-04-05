@@ -1308,6 +1308,66 @@
                     }
                 ]
             }
+        ]},
+        {
+            "description": "[F17] + space => シフトモード",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                    "modifiers": {
+                        "key_code": "f17",
+                        "mandatory":[],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [
+                    {
+                        "set_variable": {
+                        "name": "my_modifier_2",
+                        "value":1
+                        }
+                    }
+                ],
+                "to_after_key_up": [
+                    {
+                        "set_variable": {
+                        "name":"my_modifier_2",
+                        "value": 0
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "spacebar",
+                    "modifiers": {
+                        "mandatory":[],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "left_shift"
+                    }
+                ],
+                "conditions": [
+                    {
+                        "type": "variable_if",
+                        "name":"my_modifier_2",
+                        "value": 1
+                    }
+                ],
+                "to_if_alone": [
+                    {
+                        "set_variable": {
+                            "name": "next_shift_mode",
+                            "value": 1
+                        }
+                    }
+                ]
+            }
         ]}
     ]
 }
