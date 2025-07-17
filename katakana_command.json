@@ -1,0 +1,21 @@
+{
+  "title": "Japanese PC Katakana to Right Command",
+  "rules": [
+    {
+      "description": "Map Japanese PC Katakana key to Right Command",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "japanese_pc_katakana"
+          },
+          "to": [
+            {
+              "key_code": "right_command"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

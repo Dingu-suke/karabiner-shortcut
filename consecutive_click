@@ -1,0 +1,24 @@
+{
+  "title": "Python Script 用のもの。F19 をクリックボタンにする",
+  "rules": [
+    {
+      "description": "F19 to execute Python script for continuous click",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f19",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "python3 ./click.py"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
