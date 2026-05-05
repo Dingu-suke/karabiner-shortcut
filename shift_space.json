@@ -1,0 +1,38 @@
+{
+  "title": "全角スペース->半角スペース",
+  "rules": [
+
+{
+  "description": "全角スペース->半角スペース",
+  "manipulators": [
+    {
+      "type": "basic",
+      "from": {
+          "key_code": "spacebar",
+          "modifiers": {
+              "mandatory":[],
+              "optional": []
+          }
+      },
+      "to": [
+          {"key_code": "spacebar", "modifiers": "left_shift"}
+      ]
+    }
+    ,
+    {
+      "type": "basic",
+      "from": {
+          "key_code": "spacebar",
+          "modifiers": {
+              "mandatory":["shift"],
+              "optional": []
+          }
+      },
+      "to": [
+          {"key_code": "spacebar"}
+      ]
+    }
+  ]
+}
+  ]
+}
