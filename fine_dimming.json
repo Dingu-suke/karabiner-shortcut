@@ -1,0 +1,34 @@
+{
+  "title": "256段階の調光をF1､F2で操作",
+  "rules": [
+    {
+      "description": "F1/F2 for fine dimming control with fn+shift+option (256 levels)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f1"
+          },
+          "to": [
+            {
+              "key_code": "f1",
+              "modifiers": ["fn", "shift", "option"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f2"
+          },
+          "to": [
+            {
+              "key_code": "f2",
+              "modifiers": ["fn", "shift", "option"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
