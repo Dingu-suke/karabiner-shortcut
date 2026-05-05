@@ -1,0 +1,25 @@
+{
+  "title": "Command+A to Control+Shift+A",
+  "rules": [
+    {
+      "description": "Change Command+A to Control+Shift+A",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "mandatory": ["command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "a",
+              "modifiers": ["control", "shift"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

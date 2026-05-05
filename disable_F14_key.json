@@ -1,0 +1,21 @@
+{
+  "title": "Disable Scroll Lock",
+  "rules": [
+    {
+      "description": "Disable Scroll Lock",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "scroll_lock"
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
