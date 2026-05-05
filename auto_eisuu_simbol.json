@@ -14,7 +14,9 @@
                         }
                     },
                     "to": [
-                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "japanese_eisuu"}
+                    ],
+                    "to_after_key_up": [
                         {"key_code": "semicolon"},
                         {"key_code": "japanese_kana"}
                     ],
@@ -39,7 +41,9 @@
                         }
                     },
                     "to": [
-                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "japanese_eisuu"}
+                    ],
+                    "to_after_key_up": [
                         {"key_code": "quote"},
                         {"key_code": "japanese_kana"}
                     ],
@@ -64,7 +68,9 @@
                         }
                     },
                     "to": [
-                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "japanese_eisuu"}
+                    ],
+                    "to_after_key_up": [
                         {"key_code": "backslash"},
                         {"key_code": "japanese_kana"}
                     ],
@@ -89,7 +95,9 @@
                         }
                     },
                     "to": [
-                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "japanese_eisuu"}
+                    ],
+                    "to_after_key_up": [
                         {"key_code": "comma", "modifiers": "shift"},
                         {"key_code": "japanese_kana"}
                     ],
@@ -114,7 +122,9 @@
                         }
                     },
                     "to": [
-                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "japanese_eisuu"}
+                    ],
+                    "to_after_key_up": [
                         {"key_code": "period", "modifiers": "shift"},
                         {"key_code": "japanese_kana"}
                     ],
@@ -139,7 +149,9 @@
                         }
                     },
                     "to": [
-                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "japanese_eisuu"}
+                    ],
+                    "to_after_key_up": [
                         {"key_code": "slash"},
                         {"key_code": "japanese_kana"}
                     ],
@@ -164,7 +176,9 @@
                         }
                     },
                     "to": [
-                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "japanese_eisuu"}
+                    ],
+                    "to_after_key_up": [
                         {"key_code": "open_bracket"},
                         {"key_code": "japanese_kana"}
                     ],
@@ -189,7 +203,9 @@
                         }
                     },
                     "to": [
-                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "japanese_eisuu"}
+                    ],
+                    "to_after_key_up": [
                         {"key_code": "close_bracket"},
                         {"key_code": "japanese_kana"}
                     ],
@@ -214,7 +230,9 @@
                         }
                     },
                     "to": [
-                        {"key_code": "japanese_eisuu"},
+                        {"key_code": "japanese_eisuu"}
+                    ],
+                    "to_after_key_up": [
                         {"key_code": "non_us_pound"},
                         {"key_code": "japanese_kana"}
                     ],
