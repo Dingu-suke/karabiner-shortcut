@@ -986,52 +986,53 @@
                     }
                 },
                 "to": [
-                    {"key_code": "japanese_kana"}
+                    {"key_code": "spacebar", "modifiers": "left_shift"}
                 ],
                 "conditions": [
                     {
                     "type": "variable_if",
                     "name":"my_modifier_2",
                     "value": 1
-                    },
-                    {
-                        "type": "input_source_if",
-                        "input_sources": [
-                            {
-                            "language": "^en$"
-                            }
-                        ]
                     }
-                ]
-            },
-            {
-                "type": "basic",
-                "from": {
-                    "key_code": "f18",
-                    "modifiers": {
-                        "mandatory":[],
-                        "optional": ["any"]
-                    }
-                },
-                "to": [
-                    {"key_code": "japanese_eisuu"}
-                ],
-                "conditions": [
-                    {
-                    "type": "variable_if",
-                    "name":"my_modifier_2",
-                    "value": 1
-                    },
-                    {
-                        "type": "input_source_if",
-                        "input_sources": [
-                            {
-                            "language": "ja"
-                            }
-                        ]
-                    }
+                    // ,
+                    // {
+                    //     "type": "input_source_if",
+                    //     "input_sources": [
+                    //         {
+                    //         "language": "^en$"
+                    //         }
+                    //     ]
+                    // }
                 ]
             }
+            // {
+            //     "type": "basic",
+            //     "from": {
+            //         "key_code": "f18",
+            //         "modifiers": {
+            //             "mandatory":[],
+            //             "optional": ["any"]
+            //         }
+            //     },
+            //     "to": [
+            //         {"key_code": "japanese_eisuu"}
+            //     ],
+            //     "conditions": [
+            //         {
+            //         "type": "variable_if",
+            //         "name":"my_modifier_2",
+            //         "value": 1
+            //         },
+            //         {
+            //             "type": "input_source_if",
+            //             "input_sources": [
+            //                 {
+            //                 "language": "ja"
+            //                 }
+            //             ]
+            //         }
+            //     ]
+            // }
         ]},
         {
             "description": "[F17] z ▶ cmd z, x ▶ cmd shift z ",
@@ -1111,7 +1112,7 @@
             ]
         },
         {
-            "description": "[F17] + space => caps_lock ",
+            "description": "[F17] + 9 => caps_lock ",
             "manipulators": [
                 {
                     "type": "basic",
@@ -1151,6 +1152,59 @@
                     "to": [
                         {
                             "key_code": "caps_lock"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[F17] + space => left_shift ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f17",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_2",
+                                "value":1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name":"my_modifier_2",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "spacebar",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_shift"
                         }
                     ],
                     "conditions": [
@@ -1310,7 +1364,61 @@
             }
         ]},
         {
-            "description": "[F17] c ▶ control c ",
+            "description": "[F17] r ▶ control c ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f17",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_2",
+                                "value":1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name":"my_modifier_2",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "r",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "c", 
+                            "modifiers": "left_control"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[F17] c ▶ command c ",
             "manipulators": [
                 {
                     "type": "basic",
@@ -1350,7 +1458,61 @@
                     "to": [
                         {
                             "key_code": "c", 
-                            "modifiers": "left_control"
+                            "modifiers": "left_command"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "my_modifier_2",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "[F17] a ▶ command a ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f17",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "my_modifier_2",
+                                "value":1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name":"my_modifier_2",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "a",
+                        "modifiers": {
+                            "mandatory":[],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "a", 
+                            "modifiers": "left_command"
                         }
                     ],
                     "conditions": [
